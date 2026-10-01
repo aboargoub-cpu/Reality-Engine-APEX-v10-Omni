@@ -1,0 +1,50 @@
+{
+  "app": "Reality Engine APEX",
+  "version": "9.0",
+  "handoff": {
+    "preferred": "universal_link",
+    "fallback": "custom_url_scheme",
+    "permission_policy": "iOS controls permissions"
+  },
+  "request": {
+    "projectId": "string",
+    "captureSessionId": "string",
+    "requestedControlPointIds": [
+      "RCP-001",
+      "RCP-002",
+      "RCP-003",
+      "RCP-004"
+    ],
+    "returnURL": "string"
+  },
+  "response": {
+    "captureSessionId": "string",
+    "pointCloud": "PLY/LAS/LAZ",
+    "controlPoints": [
+      {
+        "id": "RCP-001",
+        "scanXYZ": [
+          0,
+          0,
+          0
+        ],
+        "confidence": 0.99,
+        "frameRef": "string"
+      }
+    ],
+    "device": {
+      "model": "string",
+      "os": "string"
+    },
+    "integrity": {
+      "sha256": "string",
+      "signature": "string"
+    }
+  },
+  "qualityGate": {
+    "minimumControlPoints": 4,
+    "independentCheckRequired": true,
+    "transform": "7-parameter similarity",
+    "humanApprovalRequired": true
+  }
+}
